@@ -1,0 +1,1 @@
+$(document).ready((function(){Grilar.initCodeEditor("custom_css")}));

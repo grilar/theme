@@ -1,0 +1,33 @@
+{
+    "name": "grilar/theme",
+    "description": "Theme package",
+    "type": "package",
+	"license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Grilar\\Theme\\": "src"
+        }
+    },
+    "require": {
+        "grilar/platform": "*@dev",
+        "grilar/sitemap": "*@dev",
+        "grilar/widget": "*@dev",
+        "grilar/slug": "*@dev",
+        "grilar/seo-helper": "*@dev"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Grilar\\Theme\\Providers\\ThemeServiceProvider",
+                "Grilar\\Theme\\Providers\\RouteServiceProvider"
+            ],
+            "aliases": {
+                "Theme": "Grilar\\Theme\\Facades\\Theme",
+                "ThemeOption": "Grilar\\Theme\\Facades\\ThemeOption",
+                "ThemeManager": "Grilar\\Theme\\Facades\\Manager",
+                "AdminBar": "Grilar\\Theme\\Facades\\AdminBar",
+                "SiteMapManager": "Grilar\\Theme\\Facades\\SiteMapManager"
+            }
+        }
+    }
+}
